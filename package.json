@@ -1,0 +1,16 @@
+{
+  "name": "tzach.dev",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "start": "yarn start:ssr",
+    "start:ssr": "lerna run --scope ssr start"
+  }
+}
