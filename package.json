@@ -12,15 +12,16 @@
     "lint-staged": "^10.5.4"
   },
   "scripts": {
+    "build": "lerna exec yarn build",
     "start": "yarn start:ssr",
-    "start:ssr": "lerna run --scope ssr start",
+    "start:ssr": "lerna exec --scope ssr yarn start",
     "dev": "yarn dev:ssr",
-    "dev:ssr": "lerna run --scope ssr dev",
-    "lint": "lerna run lint"
+    "dev:ssr": "lerna exec --scope ssr yarn dev",
+    "lint:fix": "lerna run lint:fix"
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts}": [
-      "yarn lint --fix",
+      "yarn lint:fix",
       "git add"
     ]
   },
