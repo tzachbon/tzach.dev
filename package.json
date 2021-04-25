@@ -19,8 +19,8 @@
     "lint": "lerna run lint"
   },
   "lint-staged": {
-    "packages/**/*.{js,jsx,tsx}": [
-      "yarn lint --fix", 
+    "**/*.{js,jsx,tsx,ts}": [
+      "yarn lint --fix",
       "git add"
     ]
   },
