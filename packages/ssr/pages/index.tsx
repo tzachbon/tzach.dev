@@ -1,17 +1,8 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
-import { GetStaticPropsContext } from 'next'
 
 const ThreeD = dynamic(() => import('../components/ThreeD'), { ssr: false })
-
-export async function getStaticProps(context: GetStaticPropsContext) {
-	return {
-		props: {
-			context
-		}, // will be passed to the page component as props
-	}
-}
 
 export default function Home() {
 
