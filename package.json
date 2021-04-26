@@ -9,9 +9,12 @@
   "devDependencies": {
     "husky": "^6.0.0",
     "lerna": "^4.0.0",
-    "lint-staged": "^10.5.4"
+    "lint-staged": "^10.5.4",
+    "rimraf": "^3.0.2"
   },
   "scripts": {
+    "cleanBuild": "yarn run rimraf .next",
+    "prebuild": "yarn cleanBuild",
     "build": "lerna exec yarn build",
     "start": "yarn start:ssr",
     "start:ssr": "lerna exec --scope ssr yarn start",
