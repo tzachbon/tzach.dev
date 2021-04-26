@@ -13,7 +13,7 @@
     "rimraf": "^3.0.2"
   },
   "scripts": {
-    "cleanBuild": "yarn run rimraf .next",
+    "cleanBuild": "yarn run rimraf .next && yarn run rimraf out",
     "prebuild": "yarn cleanBuild",
     "build": "lerna exec yarn build",
     "start": "yarn start:ssr",
