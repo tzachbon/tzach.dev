@@ -58,6 +58,7 @@ function Ground() {
 	const [floor, normal] = useTexture(['/SurfaceImperfections003_1K_var1.jpg', '/SurfaceImperfections003_1K_Normal.jpg'])
 
 	return (
+		//@ts-ignore
 		<Reflector resolution={512} args={[100, 100, 4, 4]} mirror={0.4} mixBlur={8} mixStrength={1} rotation={[-Math.PI / 2, 0, Math.PI / 2]} blur={[400, 100]}>
 			{(Material, props) => <Material color="#797979" metalness={0.4} roughnessMap={floor} normalMap={normal} normalScale={[1, 1]} {...props} />}
 		</Reflector>
@@ -92,7 +93,9 @@ export default function ThreeD({ className }: Props) {
 		<Suspense fallback={null}>
 			<Canvas className={className} mode='concurrent'>
 				<color attach="background" args={['black']} />
+				{/* @ts-ignore */}
 				<ContactShadows position={[0, 0, 0]} width={100} height={20} far={20} rotation={[Math.PI / 2, 0, 0]} />
+				{/* @ts-ignore */}
 				<OrbitControls maxPolarAngle={MAX_POLAR_ANGLE} maxDistance={10} enableDamping={false} enablePan={false} autoRotate />
 				<Stars fade />
 				<ambientLight intensity={0.5} />

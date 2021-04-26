@@ -23,6 +23,7 @@ module.exports = {
 	},
 	plugins: ['react', '@typescript-eslint'],
 	rules: {
+		'@typescript-eslint/ban-ts-comment': 'warn',
 		'explicit-module-boundary-types': 'off',
 		'react/jsx-uses-react': 'off',
 		'react/react-in-jsx-scope': 'off',

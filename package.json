@@ -17,7 +17,7 @@
     "start:ssr": "lerna exec --scope ssr yarn start",
     "dev": "yarn dev:ssr",
     "dev:ssr": "lerna exec --scope ssr yarn dev",
-    "lint:fix": "lerna run lint:fix"
+    "lint:fix": "lerna exec yarn lint:fix"
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts}": [
@@ -27,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn run lint-staged"
     }
   }
 }
