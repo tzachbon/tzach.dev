@@ -1,10 +1,21 @@
-import Head from 'next/head'
+import { GetServerSideProps } from 'next'
 import dynamic from 'next/dynamic'
+import Head from 'next/head'
+import { Joystick } from 'react-joystick-component'
 import styles from '../styles/Home.module.css'
+import { DeviceType, getDeviceType } from '../utils/getDeviceType'
 
 const ThreeD = dynamic(() => import('../components/ThreeD'), { ssr: false })
 
-export default function Home() {
+export interface CustomServerSideProps {
+	deviceType: DeviceType
+}
+
+type Props = CustomServerSideProps
+
+export default function Home({ deviceType }: Props) {
+	const isMobile = deviceType === DeviceType.MOBILE
+
 
 	return (
 		<div className={styles.container}>
@@ -17,15 +28,37 @@ export default function Home() {
 				Welcome to <a href="/">tzach.dev!</a>
 			</h1>
 
-			<p className={styles.description}>
-				Try to use the keyboard
-			</p>
+			{
+				!isMobile && (
+					<p className={styles.description}>
+						Try to use the keyboard
+					</p>
+				)
+			}
+
 
 			<ThreeD className={styles.main} />
+
+			{
+				isMobile && (
+					<Joystick />
+				)
+			}
 
 			<footer className={styles.footer}>
 				tzach.dev
 			</footer>
 		</div>
 	)
+}
+
+
+export const getServerSideProps: GetServerSideProps<CustomServerSideProps> = async ({ req }) => {
+	const userAgent = req.headers['user-agent']
+
+	return {
+		props: {
+			deviceType: getDeviceType(userAgent)
+		}
+	}
 }

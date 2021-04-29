@@ -96,8 +96,7 @@ export default function ThreeD({ className }: Props) {
 				{/* @ts-ignore */}
 				<ContactShadows position={[0, 0, 0]} width={100} height={20} far={20} rotation={[Math.PI / 2, 0, 0]} />
 				{/* @ts-ignore */}
-				<OrbitControls maxPolarAngle={MAX_POLAR_ANGLE} maxDistance={10} enableDamping={false} enablePan={false} autoRotate />
-				<Stars fade />
+				<OrbitControls maxPolarAngle={MAX_POLAR_ANGLE} maxDistance={10} enableDamping={false} enablePan={false} />
 				<ambientLight intensity={0.5} />
 				<spotLight position={[10, 55, 10]} angle={1} />
 				<Effects />
