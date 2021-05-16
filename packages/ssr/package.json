@@ -4,9 +4,10 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
+        "clean": "yarn run rimraf dist",
         "build": "yarn build:server && next build",
         "build:server": "yarn run tsc --project tsconfig.server.json",
-        "prebuild": "yarn lint",
+        "prebuild": "yarn clean && yarn lint",
         "lint": "yarn run eslint",
         "lint:fix": "yarn run lint --fix",
         "start": "next start -p $PORT"
