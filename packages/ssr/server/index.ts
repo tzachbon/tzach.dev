@@ -4,11 +4,12 @@ import nextConfig from '../next.config'
 import path from 'path'
 import next from 'next'
 
+const dir = process.cwd().includes(path.join('packages', 'ssr')) ? undefined : path.join('packages', 'ssr')
 const dev = process.env.NODE_ENV !== 'production'
 const nextOptions: NextServer['options'] = {
-	dir: path.join('packages', 'ssr'),
+	dir,
 	dev,
-	conf: nextConfig, 
+	conf: nextConfig,
 	customServer: true
 }
 
