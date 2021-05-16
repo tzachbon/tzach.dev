@@ -13,6 +13,7 @@
     "rimraf": "^3.0.2"
   },
   "scripts": {
+    "postinstall": "cd packages/ssr",
     "cleanBuild": "yarn run rimraf .next && yarn run rimraf out",
     "prebuild": "yarn cleanBuild",
     "build": "lerna exec yarn build",
