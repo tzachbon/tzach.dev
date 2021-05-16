@@ -1,9 +1,18 @@
 import express, { Request, Response } from 'express'
+import { NextServer } from 'next/dist/server/next'
+import nextConfig from '../next.config'
 import path from 'path'
 import next from 'next'
 
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dir: path.join('packages', 'ssr'), dev })
+const nextOptions: NextServer['options'] = {
+	dir: path.join('packages', 'ssr'),
+	dev,
+	conf: nextConfig as any,
+	customServer: true
+}
+
+const app = next(nextOptions)
 const handle = app.getRequestHandler()
 const port = process.env.PORT || 3000
 
