@@ -1,7 +1,6 @@
 import { GetServerSideProps } from 'next'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
-import { Joystick } from 'react-joystick-component'
 import styles from '../styles/Home.module.css'
 import { DeviceType, getDeviceType } from '../utils/getDeviceType'
 
@@ -37,17 +36,16 @@ export default function Home({ deviceType }: Props) {
 			}
 
 
-			<ThreeD className={styles.main} />
+			<ThreeD isMobile={isMobile} className={styles.main} />
 
 			{
-				isMobile && (
-					<Joystick />
+				!isMobile && (
+					<footer className={styles.footer}>
+						tzach.dev
+					</footer>
 				)
 			}
 
-			<footer className={styles.footer}>
-				tzach.dev
-			</footer>
 		</div>
 	)
 }
