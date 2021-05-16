@@ -13,11 +13,9 @@
     "rimraf": "^3.0.2"
   },
   "scripts": {
-    "cleanBuild": "yarn run rimraf .next && yarn run rimraf out",
-    "prebuild": "yarn cleanBuild",
     "build": "lerna exec yarn build",
     "start": "yarn start:ssr",
-    "start:ssr": "lerna exec --scope ssr yarn start",
+    "start:ssr": "NODE_ENV=production node packages/ssr/dist/server/index.js",
     "dev": "yarn dev:ssr",
     "dev:ssr": "lerna exec --scope ssr yarn dev",
     "lint:fix": "lerna exec yarn lint:fix"
