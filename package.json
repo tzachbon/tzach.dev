@@ -14,7 +14,7 @@
   },
   "scripts": {
     "cleanBuild": "yarn run rimraf .next && yarn run rimraf out",
-    "prebuild": "yarn cleanBuild && cd packages/ssr",
+    "prebuild": "yarn cleanBuild",
     "build": "lerna exec yarn build",
     "start": "yarn start:ssr",
     "start:ssr": "lerna exec --scope ssr yarn start",
