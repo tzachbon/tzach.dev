@@ -9,8 +9,7 @@
         "postbuild": "yarn moveBuildToRoot",
         "lint": "yarn run eslint",
         "lint:fix": "yarn run lint --fix",
-        "start": "next start",
-        "moveBuildToRoot": "yarn run copyfiles -u 1 \".next/**/*.*\" \"../../.next\" && yarn run copyfiles -u 1 \"out/**/*.*\" \"../../out\""
+        "start": "next start"
     },
     "dependencies": {
         "@react-three/cannon": "^1.1.1",
