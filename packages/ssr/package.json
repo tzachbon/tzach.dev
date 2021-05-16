@@ -6,7 +6,7 @@
         "dev": "next dev",
         "build": "next build",
         "prebuild": "yarn lint",
-        "postbuild": "next export && yarn moveBuildToRoot",
+        "postbuild": "yarn moveBuildToRoot",
         "lint": "yarn run eslint",
         "lint:fix": "yarn run lint --fix",
         "start": "next start",
