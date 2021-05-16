@@ -8,7 +8,7 @@ const dev = process.env.NODE_ENV !== 'production'
 const nextOptions: NextServer['options'] = {
 	dir: path.join('packages', 'ssr'),
 	dev,
-	conf: nextConfig as any,
+	conf: nextConfig, 
 	customServer: true
 }
 
