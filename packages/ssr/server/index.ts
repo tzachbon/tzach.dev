@@ -1,8 +1,9 @@
 import express, { Request, Response } from 'express'
+import path from 'path'
 import next from 'next'
 
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
+const app = next({ dir: path.join('packages', 'ssr'), dev })
 const handle = app.getRequestHandler()
 const port = process.env.PORT || 3000
 
