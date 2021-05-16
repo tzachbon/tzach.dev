@@ -5408,8 +5408,8 @@ react-dom@17.0.2:
 
 react-dom@^16.5.0:
   version "16.14.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
-  integrity sha1-etg47Cmnd/s8dcOhkPZhz5Kri4k=
+  resolved "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
+  integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -5423,8 +5423,8 @@ react-is@16.13.1, react-is@^16.8.1:
 
 react-joystick-component@^1.4.0:
   version "1.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-joystick-component/-/react-joystick-component-1.4.0.tgz#d392909a2c2f54cd2b6b336a1ea10c345c4470e7"
-  integrity sha1-05KQmiwvVM0razNqHqEMNFxEcOc=
+  resolved "https://registry.npmjs.org/react-joystick-component/-/react-joystick-component-1.4.0.tgz#d392909a2c2f54cd2b6b336a1ea10c345c4470e7"
+  integrity sha512-S+hVdXjcK3PnKZIufW2dXv4ISPnSjZNOv1llQaULhk13K+7YTrgkXF1jMp1YFgkjhU2OKWn1M7kYDOy7IrGBkA==
   dependencies:
     react "^16.5.0"
     react-dom "^16.5.0"
@@ -5470,8 +5470,8 @@ react@17.0.2:
 
 react@^16.5.0:
   version "16.14.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
-  integrity sha1-lNd23dCqo32j7aj8W2sYpMmjEU0=
+  resolved "https://registry.npmjs.org/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
+  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -5831,8 +5831,8 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
 
 scheduler@^0.19.1:
   version "0.19.1"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
-  integrity sha1-Tz4u0sGn1laB9MhU+oxaHMtA8ZY=
+  resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
+  integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
